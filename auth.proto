@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service AuthenticationService {
+  rpc Auth (User) returns (Authentication);
+}
+
+message User {
+  string userName = 1;
+  string password = 2;
+}
+
+message Authentication {
+  bool authenticated = 1;
+}
